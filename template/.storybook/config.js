@@ -5,7 +5,7 @@ addParameters({
   options: {
     panelPosition: 'right',
     theme: {
-      brandTitle: `react-cdd-demo v${appPackage.version}`
+      brandTitle: `react-component-library-template v${appPackage.version}`
     }
   }
 });
