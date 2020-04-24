@@ -22,35 +22,35 @@ module.exports = {
         }
       },
       {
-        test:/\.module.(s*)css$/,
-        include: path.resolve(__dirname, 'src'),
-        exclude: /(node_modules|bower_components|build)/,
-        use:[
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-              minimize: true
-            }
-          }, 
-          'sass-loader'
-        ]
-      },
-      {
         test:/\.(s*)css$/,
         include: path.resolve(__dirname, 'src'),
         exclude: /(node_modules|bower_components|build)/,
-        use:[
-          'style-loader',
+        oneOf: [
           {
-            loader: 'css-loader',
-            options: {
-              modules: false,
-              minimize: true
-            }
-          }, 
-          'sass-loader'
+            test: /\.module\.(s*)css$/,
+            use: [
+              'style-loader',
+              {
+                loader: 'css-loader',
+                options: {
+                  modules: true
+                }
+              }, 
+              'sass-loader'
+            ]
+          },
+          {
+            use: [
+              'style-loader',
+              {
+                loader: 'css-loader',
+                options: {
+                  modules: false
+                }
+              }, 
+              'sass-loader'
+            ]
+          }
         ]
       },
       {

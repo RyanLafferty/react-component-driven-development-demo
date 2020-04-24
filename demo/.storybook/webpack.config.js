@@ -8,43 +8,42 @@ module.exports = async ({ config, mode }) => {
 
   // Make whatever fine-grained changes you need
 
-  // add style module loader
-  config.module.rules.push({
-    test:/\.module.(s*)css$/,
-    exclude: /(node_modules|bower_components|build)/,
-    use:[
-      'style-loader',
-      {
-        loader: 'css-loader',
-        options: {
-          modules: true,
-          minimize: false
-        }
-      }, 
-      'sass-loader'
-    ]
-  });
-
-  // add stylesheet loader
-  config.module.rules.push({
-    test:/\.(s*)css$/,
-    exclude: /(node_modules|bower_components|build)/,
-    use:[
-      'style-loader',
-      {
-        loader: 'css-loader',
-        options: {
-          modules: false,
-          minimize: false
-        }
-      }, 
-      'sass-loader'
-    ]
-  });
-
-  // override svg loader to disable optimization
+  // override existing rules with some of our own
   const existingRules = config.module.rules;
   config.module.rules = [
+    // loader for style sheets and modules
+    {
+      test:/\.(s*)css$/,
+      exclude: /(node_modules|bower_components|build)/,
+      oneOf: [
+        {
+          test: /\.module\.(s*)css$/,
+          use: [
+            'style-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                modules: true
+              }
+            },
+            'sass-loader'
+          ]
+        },
+        {
+          use: [
+            'style-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                modules: false
+              }
+            },
+            'sass-loader'
+          ]
+        }
+      ]
+    },
+    // svg loader to disable optimization
     {
       test: /\.svg$/,
       exclude: /(node_modules|bower_components|build)/,
