@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExampleComponent when no props are provided ExampleComponent renders 1`] = `
+<div
+  className="message"
+>
+  Hello World!
+</div>
+`;
