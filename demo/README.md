@@ -73,3 +73,23 @@ Runs eslint in auto-fix mode which will fix an auto-fixable styling issues.
 ```bash
 yarn lint:fix
 ```
+
+### stylelint
+
+Runs stylelint, which is a linter used to enforce code style for scss style sheets and modules.
+
+#### stylelint example
+
+```bash
+yarn stylelint
+```
+
+### stylelint:fix
+
+Runs stylelint in auto-fix mode which will fix an auto-fixable styling issues.
+
+#### stylelint:fix example
+
+```bash
+yarn stylelint:fix
+```
