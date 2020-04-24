@@ -1,4 +1,5 @@
 export { default as ExampleComponent } from './ExampleComponent';
+export { default as SVGComponent } from './SVGComponent';
 
 // Component Styling Method Examples
 export { default as InlineCSSExampleComponent } from './ComponentStylingMethods/InlineCSSExampleComponent';
