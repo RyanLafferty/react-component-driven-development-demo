@@ -1,6 +1,6 @@
 ### Usage
 ```js
-import SCSSExampleComponent from 'react-component-driven-development-demo';
+import { SCSSExampleComponent } from 'react-component-driven-development-demo';
 
 ...
 

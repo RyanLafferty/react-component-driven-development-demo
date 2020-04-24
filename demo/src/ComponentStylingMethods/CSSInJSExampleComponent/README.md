@@ -1,6 +1,6 @@
 ### Usage
 ```js
-import CSSInJSExampleComponent from 'react-component-driven-development-demo';
+import { CSSInJSExampleComponent } from 'react-component-driven-development-demo';
 
 ...
 
