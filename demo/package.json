@@ -21,8 +21,8 @@
     "test": "NODE_PATH=node_modules:src:. jest",
     "lint": "node_modules/.bin/eslint -c .eslintrc.json src --ext .jsx,.js",
     "lint:fix": "node_modules/.bin/eslint -c .eslintrc.json src --ext .jsx,.js --fix",
-    "stylelint": "node_modules/.bin/stylelint TODO",
-    "stylelint:fix": "node_modules/.bin/stylelint TODO"
+    "stylelint": "node_modules/.bin/stylelint \"./src/**/*.scss\"",
+    "stylelint:fix": "node_modules/.bin/stylelint \"./src/**/*.scss\" --fix"
   },
   "dependencies": {
     "react": "^16.13.1",
