@@ -8,16 +8,25 @@ module.exports = async ({ config, mode }) => {
 
   // Make whatever fine-grained changes you need
 
-  // override existing rules with some of our own
-  const existingRules = config.module.rules;
+  let existingRules = config.module.rules;
+
+  // update css rule to ignore css modules
+  const cssRule = existingRules.find(rule => rule.test.test('test.css'));
+  cssRule.exclude = /\.module\.css$/;
+
+  // update static media rule to ignore svgs
+  const svgRule = existingRules.find(rule => rule.test.test('test.svg'));
+  svgRule.exclude = /\.svg$/;
+
+  // add some of our own rules before the storybook rules
   config.module.rules = [
-    // loader for style sheets and modules
+    // loader for scss style sheets and modules
     {
-      test:/\.(s*)css$/,
+      test:/\.scss$/,
       exclude: /(node_modules|bower_components|build)/,
       oneOf: [
         {
-          test: /\.module\.(s*)css$/,
+          test: /\.module\.scss$/,
           use: [
             'style-loader',
             {
@@ -41,6 +50,21 @@ module.exports = async ({ config, mode }) => {
             'sass-loader'
           ]
         }
+      ]
+    },
+    // loader for css modules
+    {
+      test:/\.module\.css$/,
+      exclude: /(node_modules|bower_components|build)/,
+      use: [
+        'style-loader',
+        {
+          loader: 'css-loader',
+          options: {
+            modules: true
+          }
+        },
+        'sass-loader'
       ]
     },
     // svg loader to disable optimization
