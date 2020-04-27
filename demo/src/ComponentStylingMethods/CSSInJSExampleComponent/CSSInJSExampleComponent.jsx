@@ -1,5 +1,6 @@
 import React from 'react';
-import withStyles from 'react-jss'
+import PropTypes from 'prop-types';
+import withStyles from 'react-jss';
 
 const styles = {
   container: {
@@ -8,10 +9,16 @@ const styles = {
     height: '200px',
     width: '200px',
   },
-}
+};
 
 const CSSInJSExampleComponent = ({ classes }) => (
   <div className={classes.container} />
 );
+
+CSSInJSExampleComponent.propTypes = {
+  classes: PropTypes.shape({
+    container: PropTypes.shape({}).isRequired,
+  }).isRequired,
+};
 
 export default withStyles(styles)(CSSInJSExampleComponent);
