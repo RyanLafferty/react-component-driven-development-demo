@@ -3,4 +3,9 @@
   border-radius: 50%;
   height: 200px;
   width: 200px;
+
+  &:hover {
+    background-color: #36f0d1;
+    cursor: pointer;
+  }
 };

@@ -2,6 +2,11 @@
 
 exports[`ExampleComponent when no props are provided ExampleComponent renders 1`] = `
 <div
+  aria-label="ExampleComponent"
   className="container"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex="0"
 />
 `;

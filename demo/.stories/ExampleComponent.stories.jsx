@@ -11,5 +11,7 @@ storiesOf('Example Components', module)
   .addDecorator(withInfo)
   .addDecorator(withPerformance)
   .add('ExampleComponent', () => (
-    <ExampleComponent />
+    <ExampleComponent
+      onClick={() => alert('Clicked!')}
+    />
   ), { info: ExampleComponentREADME });
