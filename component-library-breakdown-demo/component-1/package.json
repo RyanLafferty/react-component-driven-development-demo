@@ -1,0 +1,89 @@
+{
+  "name": "component-1",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RyanLafferty/react-component-driven-development-demo",
+    "directory": "component-library-breakdown-demo/component-2"
+  },
+  "author": {
+    "name": "Ryan Lafferty",
+    "email": "rlafferty1@hotmail.com",
+    "url": "https://ryanlafferty.github.io/lafferty.io/"
+  },
+  "main": "build/index.js",
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "webpack",
+    "storybook": "start-storybook -s ./public -p 9009",
+    "build-storybook": "build-storybook -c .storybook -s ./public -o docs",
+    "test": "NODE_PATH=node_modules:src:. jest",
+    "lint": "node_modules/.bin/eslint -c .eslintrc.json src --ext .jsx,.js",
+    "lint:fix": "node_modules/.bin/eslint -c .eslintrc.json src --ext .jsx,.js --fix",
+    "stylelint": "node_modules/.bin/stylelint \"./src/**/*.scss\"",
+    "stylelint:fix": "node_modules/.bin/stylelint \"./src/**/*.scss\" --fix"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-info": "^5.3.18",
+    "@storybook/addon-knobs": "^5.3.18",
+    "@storybook/react": "^5.3.18",
+    "@svgr/webpack": "^5.3.1",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^25.4.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "css-loader": "^3.5.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "file-loader": "^6.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^25.4.0",
+    "node-sass": "^4.14.0",
+    "react-test-renderer": "^16.13.1",
+    "sass-loader": "^8.0.2",
+    "storybook-addon-performance": "^0.10.0",
+    "style-loader": "^1.2.0",
+    "stylelint": "^13.3.3",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^3.7.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(scss|css)$": "identity-obj-proxy",
+      "\\.module.(scss|css)$": "identity-obj-proxy",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
+    }
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,scss,module.scss}": [
+      "yarn lint:fix",
+      "yarn stylelint:fix",
+      "git add"
+    ]
+  }
+}

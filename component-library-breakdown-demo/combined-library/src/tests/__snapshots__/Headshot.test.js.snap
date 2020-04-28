@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Headshot when no props are provided Headshot renders 1`] = `
+<img
+  className="container"
+/>
+`;

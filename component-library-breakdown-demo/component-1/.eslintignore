@@ -1,0 +1,14 @@
+# export files
+index.js
+
+# tests
+*.test.js
+
+# scripts
+scripts
+
+# mocks
+__mocks__
+
+# node modules
+node_modules
