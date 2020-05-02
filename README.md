@@ -43,6 +43,48 @@ Web components are a suite of various technologies that allow for the constructi
 A single file component contains all of its template, styles and scripts in a single file.
 ```
 
+### Component Driven Development (CDD)
+
+#### What is Component Driven Development?
+
+```
+Component Driven Development is a development methodology that focuses the build process around components.
+```
+
+#### Who is using Component Driven Development?
+
+* Shopify
+* Uber
+* Airbnb
+* Instagram
+* Atlassian
+
+#### What some problems that Component Driven Development aims to help solve?
+
+##### Collaboration
+
+```
+CDD can help increase collaboration between designers and developers through the use of shared component libraries and component explorers.
+```
+
+##### Velocity
+
+```
+CDD can allow work to be broken up into smaller tickets, enabling team(s) to build new pages, containers and components in parallel.
+```
+
+##### Scale
+
+```
+CDD can help companies scale as engineering teams can build and share these component libraries for use in their applications.
+```
+
+##### Complexity
+
+```
+CDD can redeuce complexity as engineers can focus on understanding individual components, containers and pages rather than the application in it's entirety.
+```
+
 ## Demo
 
 The demo is an example React component library to show off how we can build and debug components using component driven development. It has has a demo which shows you how we can export static assets such as svg components as components.
