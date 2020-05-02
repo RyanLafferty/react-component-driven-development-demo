@@ -85,6 +85,42 @@ CDD can help companies scale as engineering teams can build and share these comp
 CDD can redeuce complexity as engineers can focus on understanding individual components, containers and pages rather than the application in it's entirety.
 ```
 
+#### What are some benefits that Component Driven Development provides?
+
+* Modular
+  * Easy to replace / iterate components
+  * Faster development
+  * Reduced maintenance cost
+* Reusable
+  * Components can be shared across applications using shared component libraries
+* Test Driven
+  * Testing a well defined, highly cohesive component is easier than testing entire pages
+  * Reduction in the number of potential bugs that may be introduced into an application
+  * Easier to find and debug regressions
+* Themable
+  * Can build a unified look across applications using shared component libraries which can help establish a brand identity across your product(s)
+* Reduced complexity
+  * Easier to learn about a single component, container or page than it is to learn about an entire application
+
+#### What are some best practices when using Component Driven Development?
+
+* High Cohesion
+  * The component should perform a single, well defined task
+* Loose Coupling
+  * The component should have little to no knowledge of other component(s)
+* Reusable
+  * Components should be built so that they may be reused and extended upon
+* Easily Testable
+  * It should be very easy to understand and test the responsibility of each component
+
+#### What are some challenges that Component Driven Development may present?
+
+TODO
+
+##### How can we address some of these challenges?
+
+TODO
+
 ## Demo
 
 The demo is an example React component library to show off how we can build and debug components using component driven development. It has has a demo which shows you how we can export static assets such as svg components as components.
