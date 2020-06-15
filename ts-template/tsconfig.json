@@ -5,7 +5,6 @@
     "module": "esnext",
     "target": "es5",
     "baseUrl": ".",
-    "typeRoots" : ["src/@types", "node_modules/@types"],
     "paths": {
       "components": ["src/*"],
     },
