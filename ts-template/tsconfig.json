@@ -4,14 +4,15 @@
     "moduleResolution": "node",
     "module": "esnext",
     "target": "es5",
-    "declarationDir": "build",
+    "baseUrl": "src",
+    "outDir": "build",
     "jsx": "react",
     "declaration": true,
-    "allowJs": true,
+    //"allowJs": true, // This can sometimes cause issues
     "noImplicitAny": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "sourceMap": true
+    "sourceMap": false,
   },
   "include": ["src/**/*"],
   "exclude": [
