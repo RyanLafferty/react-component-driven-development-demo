@@ -21,7 +21,7 @@
   "exclude": [
     "node_modules",
     "build",
-    "src/**/*.stories.tsx",
-    "src/**/*.test.tsx"
+    "src/**/*.stories.(tsx|jsx)",
+    "src/**/*.test.(jsx|js|tsx|ts)"
   ]
 }
