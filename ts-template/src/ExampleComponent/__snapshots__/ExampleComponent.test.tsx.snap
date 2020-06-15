@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExampleComponent when required props are provided ExampleComponent renders 1`] = `
+<div
+  className="container"
+>
+  Hello 
+  World
+  !
+</div>
+`;
