@@ -83,7 +83,7 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,jsx,scss,module.scss}": [
+    "*.{js,jsx,ts,tsx,scss,module.scss}": [
       "yarn lint:fix",
       "yarn stylelint:fix",
       "git add"
