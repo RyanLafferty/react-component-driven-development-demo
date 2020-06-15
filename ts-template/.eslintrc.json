@@ -29,11 +29,13 @@
     "import/resolver": {
       "node": {
         "extensions": [
-            ".js",
-            ".jsx"
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
         ],
         "paths": [
-            "src"
+          "src"
         ]
       }
     }
