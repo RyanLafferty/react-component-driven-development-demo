@@ -9,7 +9,7 @@ describe('ExampleComponent', () => {
 
   beforeEach(() => {
     props = {
-      name: "World"
+      name: 'World',
     };
   });
 
