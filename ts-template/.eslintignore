@@ -1,8 +1,13 @@
 # export files
 index.js
+index.ts
+
+# type declarations
+declaration.d.ts
 
 # tests
 *.test.js
+*.test.ts
 
 # scripts
 scripts
