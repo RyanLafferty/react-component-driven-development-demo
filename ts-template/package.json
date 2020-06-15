@@ -6,7 +6,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/RyanLafferty/react-component-driven-development-demo",
-    "directory": "template"
+    "directory": "ts-template"
   },
   "author": {
     "name": "Ryan Lafferty",
