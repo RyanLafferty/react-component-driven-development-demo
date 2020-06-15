@@ -3,7 +3,7 @@ index.js
 index.ts
 
 # type declarations
-src/types/*.d.ts
+src/@types
 
 # tests
 *.test.js
