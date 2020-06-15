@@ -4,7 +4,10 @@
     "moduleResolution": "node",
     "module": "esnext",
     "target": "es5",
-    "baseUrl": "src",
+    "baseUrl": ".",
+    "paths": {
+      "components": ["src/*"],
+    },
     "outFile": "build/index.js",
     "jsx": "react",
     "declaration": true,

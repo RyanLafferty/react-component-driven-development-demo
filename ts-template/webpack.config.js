@@ -79,7 +79,10 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx", ".json"]
+    extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
+    alias: {
+      components: path.resolve('./src/'),
+    }
   },
   externals: {
     'react': 'commonjs react' 
