@@ -1,6 +1,6 @@
 module.exports = {
   roots: ["./src"],
-  moduleFileExtensions: ["ts", "tsx", "js"],
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
   testPathIgnorePatterns: ["node_modules/"],
   transform: {
     "^.+\\.tsx?$": "ts-jest"
