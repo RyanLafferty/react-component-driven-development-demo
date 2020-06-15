@@ -7,7 +7,9 @@ declaration.d.ts
 
 # tests
 *.test.js
+*.test.jsx
 *.test.ts
+*.test.tsx
 
 # scripts
 scripts

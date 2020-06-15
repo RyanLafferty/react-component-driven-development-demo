@@ -26,9 +26,15 @@
     "stylelint:fix": "node_modules/.bin/stylelint \"./src/**/*.scss\" --fix"
   },
   "dependencies": {
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-info": "^5.3.18",
+    "@storybook/addon-knobs": "^5.3.18",
+    "@storybook/react": "^5.3.18",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
+    "storybook-addon-performance": "^0.10.0"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
@@ -40,10 +46,6 @@
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-typescript": "^7.10.1",
-    "@storybook/addon-actions": "^5.3.18",
-    "@storybook/addon-info": "^5.3.18",
-    "@storybook/addon-knobs": "^5.3.18",
-    "@storybook/react": "^5.3.18",
     "@svgr/webpack": "^5.3.1",
     "@types/jest": "^26.0.0",
     "@types/react": "^16.9.36",
@@ -66,9 +68,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.0.1",
     "node-sass": "^4.14.0",
-    "react-test-renderer": "^16.13.1",
     "sass-loader": "^8.0.2",
-    "storybook-addon-performance": "^0.10.0",
     "style-loader": "^1.2.0",
     "stylelint": "^13.3.3",
     "stylelint-config-sass-guidelines": "^7.0.0",
