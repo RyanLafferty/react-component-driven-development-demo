@@ -5,10 +5,10 @@
     "module": "esnext",
     "target": "es5",
     "baseUrl": "src",
-    "outDir": "build",
+    "outFile": "build/index.js",
     "jsx": "react",
     "declaration": true,
-    //"allowJs": true, // This can sometimes cause issues
+    "allowJs": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
